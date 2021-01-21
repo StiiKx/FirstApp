@@ -13,16 +13,19 @@ class _InfosState extends State<Infos> {
   String pseudo, email;
   @override
   Widget build(BuildContext context) {
-
     final utilisateur = Provider.of<Utilisateur>(context);
 
-    GetCurrentUserData(idUtil: utilisateur.idUtil).donneesUtil.forEach((snapshot){
-      this.pseudo = snapshot.pseudo;
-      this.email = snapshot.email;
+    GetCurrentUserData(idUtil: utilisateur.idUtil)
+        .donneesUtil
+        .forEach((snapshot) {
+      setState(() {
+        this.pseudo = snapshot.pseudo;
+        this.email = snapshot.email;
+      });
     });
 
     return Scaffold(
-        body : Container(
+        body: Container(
             alignment: AlignmentDirectional.center,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -33,15 +36,13 @@ class _InfosState extends State<Infos> {
                 RaisedButton(
                     color: Colors.blue,
                     onPressed: () async {
-                  FirebaseAuth _auth = FirebaseAuth.instance;
-                  await _auth.signOut();
-                  setState(() {
-                    Navigator.pop(context);
-                  });
-                })
+                      FirebaseAuth _auth = FirebaseAuth.instance;
+                      await _auth.signOut();
+                      setState(() {
+                        Navigator.pop(context);
+                      });
+                    })
               ],
-            )
-        )
-    );
+            )));
   }
 }
