@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "791076094917",
+    "project_id": "stix-baa2e",
+    "storage_bucket": "stix-baa2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791076094917:android:b45bb304a56a8c1a0101ac",
+        "android_client_info": {
+          "package_name": "com.example.flutter_tuto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791076094917-p58fkro0dsrfqnv6j6vfsaefqakm4u85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAprbtugceMYf2i_2V4_zSq7Lgfab5-tOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791076094917-p58fkro0dsrfqnv6j6vfsaefqakm4u85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
